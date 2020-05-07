@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import storageUtils from './utils/storageUtils';
+import memoryUtils from './utils/memoryUtils';
+const user = storageUtils.getUser();
+memoryUtils.user = user;
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App />,
   document.getElementById('root')
 );
 
